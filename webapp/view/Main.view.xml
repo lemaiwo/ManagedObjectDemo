@@ -1,0 +1,22 @@
+<mvc:View controllerName="be.wl.ManagedObjectDemo.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<subHeader>
+					<Toolbar>
+						<SearchField value="{/name}" width="100%"/>
+						<Switch type="AcceptReject" state="{/nameIsValid}" enabled="false"/>
+					</Toolbar>
+				</subHeader>
+				<content>
+					<List items="{/suppliers}">
+						<items>
+							<StandardListItem title="{supplierId} {name}" />
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
